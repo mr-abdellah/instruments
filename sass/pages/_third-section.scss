@@ -1,0 +1,44 @@
+.third-part,
+.fifth-part {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  font-size: 2rem;
+  padding-top: 8rem;
+  @media screen and (min-width: 760px) {
+    padding-top: 16rem;
+  }
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    gap: 8rem;
+  }
+
+  .part-text {
+    position: relative;
+    justify-content: center;
+    padding: 0 5rem;
+    font-size: 2rem;
+    @media screen and (min-width: 1024px) {
+      padding: 0;
+      font-size: 2.7rem;
+    }
+
+    .text {
+      width: 80%;
+
+      @media screen and (min-width: 1024px) {
+        width: 70%;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      width: 70%;
+    }
+  }
+
+  .pic-left {
+    padding: 0 4.4rem;
+  }
+}

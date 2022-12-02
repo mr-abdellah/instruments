@@ -1,0 +1,22 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base"; //we don't need to write base/_base.scss
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button.scss"; // @import "layout/header";
+@import "components/cookie.scss";
+@import "components/img.scss";
+@import "components/video.scss";
+
+@import "layout/nav.scss";
+
+@import "pages/second-section.scss";
+@import "pages/third-section.scss";
+@import "pages/section-h1-and-button.scss";
+@import "pages/seventh-section.scss";
+@import "pages/footer.scss";
+@import "pages/fourth-section.scss";

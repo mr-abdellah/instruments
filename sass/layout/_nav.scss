@@ -1,0 +1,146 @@
+.container-nav {
+  position: fixed;
+  top: 0;
+  background-color: $color-black;
+  width: 100%;
+  // padding: 2.7rem 4rem;
+  z-index: 20;
+}
+.nav-and-logo {
+  position: relative;
+  width: 90%;
+  // z-index: 20;
+  padding: 2.7rem 4rem;
+  background-color: $color-black;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+  //   display: flex;
+  //   justify-content: space-between;
+  @media screen and (min-width: 760px) {
+    padding: 4rem 4rem;
+  }
+}
+
+.nav-animation {
+  animation: nav 0.03s ease-in-out;
+}
+
+.nav-bar {
+  display: none;
+
+  @media screen and (min-width: 760px) {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6rem;
+
+    a:link,
+    a:visited {
+      position: relative;
+      text-decoration: none;
+      color: $color-text;
+      text-transform: uppercase;
+
+      &:hover::after {
+        content: "]";
+        font-weight: bolder;
+        position: absolute;
+        right: -2rem;
+        color: $color-grey;
+      }
+      &:hover::before {
+        content: "[";
+        position: absolute;
+        font-weight: bolder;
+        left: -2rem;
+        color: $color-grey;
+      }
+    }
+  }
+}
+
+//   }
+// }
+
+.logo-box {
+  width: 12rem;
+  // grid-column: 1;
+  justify-self: flex-start;
+}
+.logo {
+  width: 100%;
+}
+
+//additional
+.hamburger {
+  justify-self: end;
+  position: relative;
+  display: block;
+  right: 2.6rem;
+  width: 30px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 53;
+
+  @media screen and (min-width: 759px) {
+    display: none;
+  }
+}
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0px;
+  transition: 0.4s;
+}
+.hamburger.is-active:before {
+  //
+  transform: rotate(-45deg) translate(-8px, 0);
+}
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-8px, -0.2rem);
+}
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+.mobile-nav {
+  position: fixed;
+  top: 6rem;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  z-index: 50;
+  background-color: $color-black;
+  padding-top: 120px;
+}
+.mobile-nav.is-active {
+  left: 0;
+}
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: $color-black;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 761px) {
+  .mobile-nav {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+}

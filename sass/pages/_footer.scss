@@ -1,0 +1,116 @@
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 4rem;
+  @media screen and (min-width: 760px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+  }
+  // @media screen and (min-width: 1024px) {
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  // }
+  justify-content: space-between;
+  padding: 2.6rem 5.5rem;
+  .footer-links {
+    display: flex;
+    gap: 13rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      li {
+        // margin-bottom: 1.6rem;
+        font-family: "Roboto Mono", monospace;
+        letter-spacing: 1px;
+
+        a:link,
+        a:visited {
+          position: relative;
+          text-decoration: none;
+          color: $color-text;
+          font-size: 1.4rem;
+
+          &:hover::after {
+            content: "]";
+            font-weight: bolder;
+            position: absolute;
+            right: -2rem;
+            color: $color-grey;
+          }
+          &:hover::before {
+            content: "[";
+            position: absolute;
+            font-weight: bolder;
+            left: -2rem;
+            color: $color-grey;
+          }
+        }
+        .link-li-bracket-left {
+          position: absolute;
+          font-weight: bolder;
+          left: -2rem;
+          color: $color-grey;
+        }
+        .link-li-bracket-right {
+          position: absolute;
+          font-weight: bolder;
+          right: -2rem;
+          color: $color-grey;
+        }
+      }
+    }
+  }
+}
+
+.sm-newsletter {
+  padding: 1.4rem 3rem;
+  border: 0.8px solid grey;
+  border-radius: 4rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  display: flex;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// .sm-container {
+//   display: flex;
+//   gap: 4rem;
+//   align-self: flex-end;
+//   align-items: center;
+//   padding-bottom: 1.6rem;
+// }
+
+.sm-container {
+  position: relative;
+  display: flex;
+  gap: 4rem;
+  flex-direction: row;
+  align-items: center;
+
+  @media screen and (min-width: 760px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-self: flex-end;
+  }
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    gap: 4rem;
+    align-self: flex-end;
+  }
+}
+
+.container-sm-link {
+  display: flex;
+  gap: 4rem;
+}

@@ -1,0 +1,13 @@
+.video-container {
+  position: relative;
+  padding-top: 20rem;
+  overflow: hidden;
+  height: 70%;
+  width: 100%;
+
+  .video {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+  }
+}

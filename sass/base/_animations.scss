@@ -1,0 +1,34 @@
+@keyframes moveInBottom {
+  /*0% - the initial state, 100% - finish*/
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0); /*the way it originally is*/
+  }
+}
+
+@keyframes cookie-disappear {
+  /*0% - the initial state, 100% - finish*/
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(5rem); /*the way it originally is*/
+  }
+}
+
+//section appearance
+.section {
+  transition: transform 1s, opacity 3s;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}

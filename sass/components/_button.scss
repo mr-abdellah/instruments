@@ -1,0 +1,24 @@
+.button {
+  display: flex;
+  gap: 1rem;
+  align-content: center;
+
+  text-decoration: none;
+  position: relative;
+  align-self: start;
+  padding: 1.8rem 3rem;
+  background-color: white;
+  color: black;
+  border-radius: 4rem;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: rgb(126, 124, 124);
+  }
+  span {
+    font-size: 1.35rem;
+    align-self: center;
+  }
+}

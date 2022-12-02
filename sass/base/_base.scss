@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; //1rem - 10px
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  // padding: 0 5.5rem;
+  background-color: $color-black;
+  color: $color-text;
+}
+
+.header {
+  position: relative;
+}
+
+//third-part
+.pic-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.right {
+  grid-column: 14/20;
+}
+.left {
+  grid-column: 2/11;
+}
+
+.fourth-part {
+  position: relative;
+  padding-top: 8rem;
+  @media screen and (min-width: 760px) {
+    padding-top: 16rem;
+  }
+}
+
+.right-pic {
+  grid-column: 11/-1;
+}
+.left-text {
+  grid-column: 2/8;
+}
